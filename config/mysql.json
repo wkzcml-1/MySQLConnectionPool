@@ -1,0 +1,15 @@
+{
+    /* 数据库参数 */
+    "ip": "127.0.0.1",
+    "port": 3306,
+    "username": "kai",
+    "password": "123456",
+    "dbname": "db",
+    /* 连接池参数*/
+    "initSize": 10,
+    "maxSize": 1024,
+    // 最大空闲时间 (s)
+    "maxIdleTime": 60,
+    // 连接超时时间 (ms)
+    "connectTimeOut": 100
+}

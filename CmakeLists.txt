@@ -1,0 +1,25 @@
+# cmake 版本设定
+cmake_minimum_required(VERSION 3.2)
+
+# 源文件
+aux_source_directory(./src ALL_SRC)
+
+# 项目名称
+project(MySQLConnectionPool)
+
+# 头文件目录
+include_directories(include)
+
+# 可执行文件
+add_executable(demo ${ALL_SRC})
+
+# 链接库
+target_link_libraries(demo mysqlclient jsoncpp)
+
+# 添加宏
+add_definitions()
+
+SET(CMAKE_BUILD_TYPE "Debug")  
+SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g2 -ggdb")  
+SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall") 
+
